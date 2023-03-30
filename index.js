@@ -180,17 +180,14 @@ function slideProjectCases() {
     }
 }
 
-function projectHeadingOne() {
-
+function formHTML() {
+    document.getElementById('form').innerHTML = (
+        "<h1 style='padding: 1rem; margin-top: 30%'>Thank you!</h1><p style='padding: 1rem'>We recieved your request and we will send you a confirmation Mail in the next 60mins.<br />This Email will include all details about the requested appointment :)</p>"
+    );
+    contactForm.style.visibility = 'visible';
+    contactForm.style.opacity = '1';
 }
 
-function projectHeadingTwo() {
-    
-}
-
-function projectHeadingThree() {
-    
-}
 
 
 
@@ -207,6 +204,7 @@ document.getElementById('liThreeLink').addEventListener('click', listOnClick);
 document.getElementById('liFourLink').addEventListener('click', listOnClick);
 prevArrow.addEventListener('click', gallerySlideDown);
 nextArrow.addEventListener('click', gallerySlideUp);
+document.getElementById('form').addEventListener('submit', formHTML);
 
 
 
