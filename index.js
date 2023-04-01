@@ -13,6 +13,7 @@ const slideBgThree = document.getElementById('slideBgThree');
 const prevArrow = document.getElementById('prevArrow');
 const nextArrow = document.getElementById('nextArrow');
 const projectHeading = document.getElementById('projectHeading');
+const landingDiv = document.getElementById('landingDiv');
 let galleryCounter = 1;
 
 function toggleCallVisible() {
@@ -97,57 +98,106 @@ function nextArrowStrong() {
 }
 
 function gallerySlideHandle() {
+    if(x.matches) {
     switch (galleryCounter) {
-        case 1:
-            slideBgOne.style.opacity = '1';
-            slideBgOne.style.left = '0';
-            slideBgOne.style.scale = '1';
-            slideBgTwo.style.bottom = '39.5%';
-            slideBgTwo.style.left = '100%';
-            slideBgTwo.style.opacity = '0';
-            slideBgTwo.style.scale = '0.25';
-            slideBgThree.style.bottom = '65.5%';
-            slideBgThree.style.left = '200%';
-            slideBgThree.style.opacity = '0';
-            slideBgThree.style.scale = '0.25';
-            prevArrowLight();
-            nextArrowStrong();
-            break;
+            case 1:
+                slideBgOne.style.opacity = '1';
+                slideBgOne.style.left = '0';
+                slideBgOne.style.scale = '1';
+                slideBgTwo.style.bottom = '39.5%';
+                slideBgTwo.style.left = '100%';
+                slideBgTwo.style.opacity = '0';
+                slideBgTwo.style.scale = '0.25';
+                slideBgThree.style.bottom = '65.5%';
+                slideBgThree.style.left = '200%';
+                slideBgThree.style.opacity = '0';
+                slideBgThree.style.scale = '0.25';
+                prevArrowLight();
+                nextArrowStrong();
+                break;
 
-        case 2:
-            slideBgOne.style.opacity = '0';
-            slideBgOne.style.left = '-100%';
-            slideBgOne.style.scale = '0.25';
-            slideBgTwo.style.bottom = '39.5%';
-            slideBgTwo.style.left = '0%';
-            slideBgTwo.style.opacity = '1';
-            slideBgTwo.style.scale = '1';
-            slideBgThree.style.bottom = '65.5%';
-            slideBgThree.style.left = '100%';
-            slideBgThree.style.opacity = '0';
-            slideBgThree.style.scale = '0.25';
-            prevArrowStrong();
-            nextArrowStrong();
-            break;
+            case 2:
+                slideBgOne.style.opacity = '0';
+                slideBgOne.style.left = '-100%';
+                slideBgOne.style.scale = '0.25';
+                slideBgTwo.style.bottom = '39.5%';
+                slideBgTwo.style.left = '0%';
+                slideBgTwo.style.opacity = '1';
+                slideBgTwo.style.scale = '1';
+                slideBgThree.style.bottom = '65.5%';
+                slideBgThree.style.left = '100%';
+                slideBgThree.style.opacity = '0';
+                slideBgThree.style.scale = '0.25';
+                prevArrowStrong();
+                nextArrowStrong();
+                break;
 
-        case 3:
-            slideBgOne.style.opacity = '0';
-            slideBgOne.style.left = '-200%';
-            slideBgOne.style.scale = '0.25';
-            slideBgTwo.style.bottom = '39.5%';
-            slideBgTwo.style.left = '-100%';
-            slideBgTwo.style.opacity = '0';
-            slideBgTwo.style.scale = '0.25';
-            slideBgThree.style.bottom = '65.5%';
-            slideBgThree.style.left = '0%';
-            slideBgThree.style.opacity = '1';
-            slideBgThree.style.scale = '1';
-            prevArrowStrong();
-            nextArrowLight();
-            break;
-    
-        default:
-            break;
+            case 3:
+                slideBgOne.style.opacity = '0';
+                slideBgOne.style.left = '-200%';
+                slideBgOne.style.scale = '0.25';
+                slideBgTwo.style.bottom = '39.5%';
+                slideBgTwo.style.left = '-100%';
+                slideBgTwo.style.opacity = '0';
+                slideBgTwo.style.scale = '0.25';
+                slideBgThree.style.bottom = '65.5%';
+                slideBgThree.style.left = '0%';
+                slideBgThree.style.opacity = '1';
+                slideBgThree.style.scale = '1';
+                prevArrowStrong();
+                nextArrowLight();
+                break;
+        
+            default:
+                break;
+        }
+    } else if(tabletStart.matches && tabletEnd.matches) {
+        switch (galleryCounter) {
+            case 1:
+                slideBgOne.style.visibility = 'visible';
+                slideBgOne.style.scale = '1';
+                slideBgOne.style.opacity = '1'
+                slideBgTwo.style.visibility = 'hidden';
+                slideBgTwo.style.scale = '0';
+                slideBgTwo.style.opacity = '0';
+                slideBgThree.style.visibility = 'hidden';
+                slideBgThree.style.scale = '0';
+                slideBgThree.style.opacity = '0';
+                prevArrowLight();
+                nextArrowStrong();
+                break;
+
+            case 2:
+                slideBgOne.style.visibility = 'hidden';
+                slideBgOne.style.scale = '0';
+                slideBgOne.style.opacity = '0'
+                slideBgTwo.style.visibility = 'visible';
+                slideBgTwo.style.scale = '1';
+                slideBgTwo.style.opacity = '1';
+                slideBgThree.style.visibility = 'hidden';
+                slideBgThree.style.scale = '0';
+                slideBgThree.style.opacity = '0';
+                prevArrowStrong();
+                nextArrowStrong();
+                break;
+
+            case 3:
+                slideBgOne.style.visibility = 'hidden';
+                slideBgOne.style.scale = '0';
+                slideBgOne.style.opacity = '0'
+                slideBgTwo.style.visibility = 'hidden';
+                slideBgTwo.style.scale = '0';
+                slideBgTwo.style.opacity = '0';
+                slideBgThree.style.visibility = 'visible';
+                slideBgThree.style.scale = '1';
+                slideBgThree.style.opacity = '1';
+                prevArrowStrong();
+                nextArrowLight();
+                break;
+        
+            default:
+                break;
+        }
     }
 }
 
@@ -181,30 +231,80 @@ function slideProjectCases() {
 }
 
 function formHTML() {
-    document.getElementById('form').innerHTML = (
-        "<h1 style='padding: 1rem; margin-top: 30%'>Thank you!</h1><p style='padding: 1rem'>We recieved your request and we will send you a confirmation Mail in the next 60mins.<br />This Email will include all details about the requested appointment :)</p>"
-    );
-    contactForm.style.visibility = 'visible';
-    contactForm.style.opacity = '1';
+    contactForm.style.visibility = 'hidden';
+    contactForm.style.opacity = '0';
+    landingDiv.style.visibility = 'visible';
+    landingDiv.style.opacity = '1';
 }
 
 
+function removeHash () { 
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+function reloadTablet() {
+    if(window.location.hash !== '#tablet') {
+        removeHash();
+        window.location = window.location + '#tablet';
+        window.location.reload();
+        return false;
+    }
+}
+
+function reloadMobile() {
+    if(window.location.hash !== '#mobile') {
+        removeHash();
+        window.location = window.location + '#mobile';
+        window.location.reload();
+        return false;
+    }
+}
+
+function reloadDesktop() {
+    if(window.location.hash !== '#desktop') {
+        removeHash();
+        window.location = window.location + '#desktop';
+        window.location.reload();
+        return false;
+    }
+}
 
 
 // Red '#F94F4F'
 // lightRed '#F09896'
 
-callButton.addEventListener('click', toggleCallVisible);
-formCross.addEventListener('click', toggleCallVisible);
-callText.addEventListener('click', toggleCallVisible);
-menuIcon.addEventListener('click', toggleMenuVisible);
-document.getElementById('liOneLink').addEventListener('click', listOnClick);
-document.getElementById('liTwoLink').addEventListener('click', listOnClick);
-document.getElementById('liThreeLink').addEventListener('click', listOnClick);
-document.getElementById('liFourLink').addEventListener('click', listOnClick);
-prevArrow.addEventListener('click', gallerySlideDown);
-nextArrow.addEventListener('click', gallerySlideUp);
-document.getElementById('form').addEventListener('submit', formHTML);
 
+var x = window.matchMedia("(max-width: 766.99px)");
+var tabletStart = window.matchMedia('(min-width: 767px)');
+var tabletEnd = window.matchMedia('(max-width :1023.99px)');
 
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        window.addEventListener('resize', reloadMobile);
+        callButton.addEventListener('click', toggleCallVisible);
+        formCross.addEventListener('click', toggleCallVisible);
+        callText.addEventListener('click', toggleCallVisible);
+        menuIcon.addEventListener('click', toggleMenuVisible);
+        document.getElementById('liOneLink').addEventListener('click', listOnClick);
+        document.getElementById('liTwoLink').addEventListener('click', listOnClick);
+        document.getElementById('liThreeLink').addEventListener('click', listOnClick);
+        document.getElementById('liFourLink').addEventListener('click', listOnClick);
+        prevArrow.addEventListener('click', gallerySlideDown);
+        nextArrow.addEventListener('click', gallerySlideUp);
+        document.getElementById('form').addEventListener('submit', formHTML);
+        gallerySlideHandle();
+    } else if(tabletStart.matches && tabletEnd.matches) {
+        window.addEventListener('resize', reloadTablet);
+        callButton.addEventListener('click', toggleCallVisible);
+        formCross.addEventListener('click', toggleCallVisible);
+        callText.addEventListener('click', toggleCallVisible);
+        document.getElementById('liFourLink').addEventListener('click', toggleCallVisible);
+        document.getElementById('form').addEventListener('submit', formHTML);
+        prevArrow.addEventListener('click', gallerySlideDown);
+        nextArrow.addEventListener('click', gallerySlideUp);
+        gallerySlideHandle();
+    }
+  }
 
+  myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes

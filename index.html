@@ -22,9 +22,9 @@
       <div id="menuDiv">
         <ul class="menu">
           <a href="#about" id="liOneLink"><li id="liOne">About</li></a>
-          <a href="#service" id="liTwoLink"><li id="liTwo">Service</li></a>
+          <a href="#scheduleCallRed" id="liTwoLink"><li id="liTwo">Service</li></a>
           <a href="#projects" id="liThreeLink"><li id="liThree">Projects</li></a>
-          <a href="#call" id="liFourLink"><li id="liFour">Schedule a Call</li></a>
+          <a href="#" id="liFourLink"><li id="liFour">Schedule a Call</li></a>
         </ul>
       </div>
       
@@ -49,59 +49,62 @@
       <main>
         
         <section id="sectionOne">
-          <picture>
-            <img src="./assets/mobile/image-hero.jpg" alt="Hero image. 2 productive guys at work." id="heroImage" class="bigImages"/>
-          </picture>
-          <div class="container">
+            <picture>
+              <img src="./assets/mobile/image-hero.jpg" alt="Hero image. 2 productive guys at work." id="heroImage" class="bigImages"/>
+            </picture>
+          <div class="container" id="heroContainer">
+            <div id="heroCenter">
           <h1>Branding & website design agency</h1>
           <p class="blackText" id="sectionOneParagraph">  We specialize in visual storytelling by creating cohesive brand and website design 
             solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
           <span id="design"></span>
           <a href="#design"><button class="redButtons" id="redButtonOne">Learn More</button></a>
+            </div>
           </div>
         </section>
         <section id="sectionTwo">
           <picture>
             <img src="./assets/mobile/image-strategic.jpg" alt="Modern Workspace on a table. There's a coffee a Mac and an Iphone e.g." id="sectionImageOne" class="bigImages" />
           </picture>
+          <div id="designSectionBg"></div>
           <img src="./assets/desktop/bg-pattern-wave-red.svg" alt="just a red wave for decoration" class="redWave" id="redWaveOne" />
-          <div class="container">
-            <h2 class="whiteText"><span id="red">Design</span> is strategic.</h2>
+          <div class="container" id="designTextContainer">
+            <h2 class="whiteText" id="designHeading"><span id="red">Design</span> is strategic.</h2>
             <p class="whiteText" id="sectionTwoParagraph">"A well-crafted design strategy consistently produces desired outcomes and brand awareness. 
               We are firm believers that success lies in creative collaboration with our clients."</p>
             <p id="scheduleCallRed">Schedule a call</p>
           </div>
-        <span id="service"></span>
-
         </section>
         <section id="sectionThree">
           <div class="container" id="sectionThreeContainer">
             <h2 class="whiteText" id="sectionThreeHeading">Our approach for creating a winning brand</h2>
-            <div class="sectionThreeSubs">
-              <div class="subHeading">
-                <span class="bgNumber">01</span>
-                <h3 class="whiteText bgNumberHeading">Brand strategy</h3>
+            <div id="subsDiv">
+              <div class="sectionThreeSubs" id="firstSub">
+                <div class="subHeading">
+                  <span class="bgNumber">01</span>
+                  <h3 class="whiteText bgNumberHeading">Brand strategy</h3>
+                </div>
+                <p class="whiteText">Brand strategy is critical for long-term success. Outshining competitors and capturing 
+                  the target audience are key.
+                </p>
               </div>
-              <p class="whiteText">Brand strategy is critical for long-term success. Outshining competitors and capturing 
-                the target audience are key.
-              </p>
+              <div class="sectionThreeSubs">
+                <div class="subHeading">
+                  <span class="bgNumber">02</span>
+                  <h3 class="whiteText bgNumberHeading">Brand design</h3>
+                </div>
+                <p class="whiteText">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
+                  value effectively.
+                </p>
+              </div>
+              <div class="sectionThreeSubs">
+                <div class="subHeading">
+                  <span class="bgNumber">03</span>
+                  <h3 class="whiteText bgNumberHeading">Web design</h3>
+                </div>
+                <p class="whiteText">A beautifully crafted website is the best tool for brand awareness, and ultimately results 
+                  in increased revenues.</p>
             </div>
-            <div class="sectionThreeSubs">
-              <div class="subHeading">
-                <span class="bgNumber">02</span>
-                <h3 class="whiteText bgNumberHeading">Brand design</h3>
-              </div>
-              <p class="whiteText">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
-                value effectively.
-              </p>
-            </div>
-            <div class="sectionThreeSubs">
-              <div class="subHeading">
-                <span class="bgNumber">03</span>
-                <h3 class="whiteText bgNumberHeading">Web design</h3>
-              </div>
-              <p class="whiteText">A beautifully crafted website is the best tool for brand awareness, and ultimately results 
-                in increased revenues.</p>
                       <span id="projects"></span>
             </div>
           </div>
@@ -109,22 +112,23 @@
 
         <section id="sectionFour">
           <div class="slideBg" id="slideBgOne" role="img" alt="Book in human hands">
-            <div class="gradientOverlay">
+            <div class="gradientOverlay" id="gradientOverlayOne">
               <p class="slideParagraph">Learn Product Roadmap<br /><span class="slideSpan">2019 Project</span></p>
             </div>
           </div>
           <div class="slideBg" id="slideBgTwo" role="img" alt="Bag on a table">
-            <div class="gradientOverlay">
+            <div class="gradientOverlay" id="gradientOverlayTwo">
               <p class="slideParagraph">New Majestic Hotel<br /><span class="slideSpan">2018 Project</span></p>
             </div>
           </div>
          <div class="slideBg" id="slideBgThree" role="img" alt="Crypto-broker Webpage on a laptop">
-            <div class="gradientOverlay">
+          <div class="gradientOverlay" id="gradientOverlayThree">
               <p class="slideParagraph">Crypto Dashboard<br /><span class="slideSpan">2016 Project</span></p>
             </div>
           </div>
-          <div class="container">
-            <h2 class="whiteText" id="projectHeading">Brand naming & guidelines</h2>
+          <div class="container" id="slideTitleContainer">
+          <div id="projectCenterDiv">
+            <h2 class="whiteText" id="projectHeading"><br />Brand naming & guidelines</h2>
             <div id="arrowDiv">
               <svg alt="Arrow to go to the previous Project" class="arrow" id="prevArrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="19.5" transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F"/>
@@ -134,10 +138,10 @@
                 <circle cx="20" cy="20" r="19.5" stroke="#F94F4F"/>
                 <path d="M17.5 15L22.5 20L17.5 25" stroke="#F94F4F" stroke-width="2"/>
                 </svg>
-                  
-                
-                
             </div>
+          </div>
+            <img src="./assets/desktop/bg-pattern-wavy-white.svg" alt="white decoration wave" id="whiteWave">
+
         </div>
 
         </section>

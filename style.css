@@ -57,6 +57,8 @@ html, body{
     overflow-x: hidden;
 }
 
+@media screen and (max-width :766.99px) {
+
 header {
     height: 12vh;
     width: 100%;
@@ -284,12 +286,6 @@ p {
     justify-content: space-between;
 }
 
-/* HOW TO ADRESS THE ARROW COLORS
-.arrow circle:hover, .arrow path:hover {
-    stroke: pink;
-}
-*/
-
 #prevArrow circle, #prevArrow path {
     stroke: #F09896;
 }
@@ -336,7 +332,7 @@ footer {
 
 #contactFormDiv {
     position: fixed;
-    background-color: rgba(255, 255, 255, 80%);
+    background-color: rgba(255, 255, 255, 95%);
     width: 100%;
     height: 100%;
     text-align: right;
@@ -407,4 +403,466 @@ a {
 
 #projectHeading {
     transition: all 0.2s linear;
+}
+
+#whiteWave {
+    display: none;
+}
+
+}
+
+@media screen and (min-width: 767px) and (max-width :1023.99px) {
+    header {
+        height: 15vh;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: #FFF;
+    }
+
+    /* #logoContainer DOUBLE ATM*/
+    #logoContainer {
+        padding: 1rem;
+    }
+
+
+    #iconContainer {
+        display: none;
+    }
+
+    #heightDiv {
+        height: 15vh;
+    }
+
+    #menuDiv {
+        width: 60%;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #F94F4F;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu a li {
+        display: inline-block;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+    }
+
+    #liOne {
+        margin-left: 0.5rem;
+    }
+
+    #liFour {
+        background-color: #000;
+        font-weight: 800;
+        padding: 1.3rem;
+        margin-left: 1rem;
+    }
+
+    #contactFormDiv {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 95%);
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        z-index: 9999;
+        border-top: 1.5px solid gray;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    form {
+        text-align: center;
+        margin-top: -3rem;
+    }
+
+    label {
+        font-weight: 800;
+        line-height: 250%;
+        font-size: 2rem;
+    }
+
+    .normalInput {
+        width: 45vw;
+        padding: 0 2.5vw;
+        height: 3rem;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    #date {
+        margin-right: 1rem;
+        border-radius: 10px;
+        border: 1px solid black;
+        height: 3rem;
+        padding: 0 1.5rem;
+        width: 30vw;
+        font-size: 1.5rem;
+    }
+    
+    #time {
+        margin-left: 1rem;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 0 0.5rem;
+        height: 3rem;
+        width: 15vw;
+        font-size: 1.5rem;
+
+    }
+
+    label {
+        font-weight: 800;
+        line-height: 250%;
+        font-size: 2rem;
+    }
+
+    #formCross {
+        height: 3rem;
+        margin: 2rem;
+    }
+
+    #formNote {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+
+    #submit {
+        padding: 2rem 4rem;
+        background-color: #F94F4F;
+        border: none;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .bigImages {
+        width: auto;
+    }
+
+    #heroImage {
+        display: none;
+    }
+
+    #heroContainer {
+        background-image: url(./assets/tablet/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #heroCenter {
+        width: 55%;
+        margin: 5rem 2rem;
+    }
+
+    #sectionOneParagraph {
+        line-height: 190%;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    #redButtonOne {
+        padding: 1.5rem 3rem;
+        background-color: #F94F4F;
+        border: none;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #sectionImageOne {
+        display: none;
+    }
+
+    #designSectionBg {
+        height: 60vh;
+        width: 50%;
+        background-image: url(./assets/tablet/image-strategic.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    #designTextContainer {
+        width: 50%;
+        height: 60vh;
+        display: inline-block;
+        position: relative;
+        left: 43%;
+        bottom: 60vh;
+        padding: 5rem 3rem;
+    }
+
+    #sectionTwo {
+        background-color: #191921;
+        color: #FFF;
+        height: 60vh;
+    }
+
+    #redWaveOne {
+       position: relative;
+       bottom: 140%;
+       left: 46%;
+       height: 2rem;
+    }
+
+    #designHeading {
+        font-size: 2rem;
+        padding-right: 5rem;
+        padding-bottom: 2.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    #red {
+        color: #F94F4F;
+    }
+
+    #sectionTwoParagraph {
+        line-height: 190%;
+        padding-bottom: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    #scheduleCallRed {
+        color: #F94F4F;
+        font-size: 1.1rem;
+        font-weight: 800;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+    }
+
+    #subsDiv {
+        background-color: #F94F4F;
+        width: 60vw;
+        height: 70vh;
+        padding: 2rem;
+        line-height: 190%;
+        margin-left: 40vw;
+        z-index: 500;
+
+    }
+
+    #sectionThreeContainer {
+        height: 70vh;
+        width: 40%;
+    }
+
+    #sectionThreeHeading {
+        font-size: 2rem;
+        margin: auto;
+        padding: 16rem 1rem 16rem 2rem;
+        color: black;
+        line-height: 130%;
+        float: left;
+    }
+
+    .bgNumber {
+        font-size: 5rem;
+        font-weight: 800;
+        color: #F09896;
+    }
+
+    .whiteText {
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .sectionThreeSubs {
+        margin-bottom: 4rem;
+    }
+
+    .bgNumberHeading {
+        position: relative;
+        bottom: 4vh;
+        left: 4%;
+        margin-bottom: -2rem;
+    }
+
+    #firstSub {
+        margin-top: 10vh;
+    }
+
+    #sectionThree {
+
+        position: relative;
+        clear: both;
+        bottom: 10vh;
+        margin-bottom: -10vh;
+    }
+    
+    #slideBgOne {
+        background-image: url(./assets/tablet/image-slide-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        left: 40%;
+        border: 1px solid green;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #slideBgTwo {
+        background-image: url(./assets/tablet/image-slide-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        bottom: 0%;
+        left: 40%;
+        visibility: hidden;
+        scale: 0;
+        opacity: 0;
+    }
+    
+    #slideBgThree {
+        background-image: url(./assets/tablet/image-slide-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        bottom: 0%;
+        left: 40%;
+        visibility: hidden;
+        scale: 0;
+        opacity: 0;
+    }
+    
+    .gradientOverlay {
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+        height: 100%;
+        width: 100%;
+
+    }
+    
+    .slideParagraph {
+        color: #FFF;
+        font-weight: 800;
+        line-height: 150%;
+        text-align: right;
+        padding: 2rem;
+        text-shadow: 4px 3px 5px rgba(0,0,0,0.6);
+        position: relative;
+        top: 75%;
+        font-size: 1.1rem;
+    }
+    
+    .slideSpan {
+        font-weight: 400;
+    }
+    
+    #arrowDiv {
+        padding: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #prevArrow circle, #prevArrow path {
+        stroke: #F09896;
+    }
+
+    .slideBg {
+        width: 60%;
+        height: 100%;
+        margin-bottom: -50vh;
+        transition: all 1s;
+    }
+
+    #sectionFour {
+        height: 50vh;
+
+
+    }
+
+    #slideTitleContainer {
+        width: 45%;
+        height: 35vh;
+        background-color: #191921;
+        z-index: 200;
+        position: relative;
+        left: 2%;     
+    }
+
+    #projectHeading {
+        padding: 0 0 1rem 2rem;
+        font-size: 2rem;
+        transition: all 0.2s linear;
+    }
+
+    #projectCenterDiv {
+        position: relative;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #arrowDiv {
+        width: 30%;
+        margin-left: 2rem;
+    }
+
+    #callScheduleButton {
+        padding: 1.5rem 3rem;
+        margin-right: 3rem;
+        background-color: #F94F4F;
+        border: none;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    #footerHeading {
+        padding: 0 50% 0 0;
+        font-size: 2.1rem;
+        padding: 5rem 2rem 5rem 2rem;
+        width: 55%;
+    }
+
+    #footerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #whiteWave {
+        transform: scaleX(-1);
+        height: 2rem;
+        position: relative;
+        left: 90%;
+        bottom: 25%;
+    }
+
+    footer {
+        padding-bottom: 4rem;
+    }
 }
