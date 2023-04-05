@@ -26,15 +26,13 @@ Users should be able to:
 ### Screenshot
 
 ![](./Mobile-Preview.png)
-
 ![](./Tablet-Preview.png)
-
 ![](./Desktop-Preview.png)
 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://lepamoore.github.io/frontendmentorio-project5/](https://lepamoore.github.io/frontendmentorio-project5/)
 
 ## My process
 
