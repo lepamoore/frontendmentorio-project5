@@ -55,13 +55,78 @@
 
 html, body{
     overflow-x: hidden;
+    width: 100vw;
 }
 
-@media screen and (max-width :766.99px) {
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width :766.49px) {
+
+#redWaveTwo {
+    display: none;
+}
+
+#scheduleCallRed:active {
+    color:#F09896;
+}
+
+#scheduleCallRed:hover {
+    cursor: pointer;
+}
+
+#redButtonOne:active {
+    background-color: #F09896;
+}
+
+#redButtonOne:hover {
+    cursor: pointer;
+}
+
+#prevArrow:hover {
+    cursor: pointer;
+}
+
+#nextArrow:hover {
+    cursor: pointer;
+}
+
+#callScheduleButton:active {
+    background-color: #F09896;
+}
+
+#callScheduleButton:hover {
+    cursor: pointer;
+}
+
+#liFourButton:active {
+    background-color: #F94F4F;
+}
+
+
+#liFourButton {
+    color: white;
+    border: none;
+    background-color: #191921;
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+#prevArrow:hover {
+    cursor: pointer;
+}
+
+#nextArrow:hover {
+    cursor: pointer;
+}
 
 header {
     height: 12vh;
-    width: 100%;
+    min-height: 80.04px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,6 +145,7 @@ header {
 
 #heightDiv {
     height: 12vh;
+    min-height: 80.04px;
 }
 
 .bigImages {
@@ -106,14 +172,14 @@ h1 {
     background-color: #F94F4F;
     font-weight: 800;
     font-size: 1rem;
-    height: 8vh;
+    height: 4rem;
     width: 50vw;
     border: none;
     margin: 2rem 0;
 }
 
 section {
-    height: 88vh;
+    min-height: 667px;
 }
 
 #sectionTwo {
@@ -121,13 +187,13 @@ section {
 }
 
 .redWave {
-    height: 5%;
+    height: 2rem;
 }
 
 #redWaveOne {
     position: relative;
-    left: 3%;
-    bottom: 3%;
+    left: 5%;
+    transform: translateY(-65%);
     z-index: 1;
 }
 
@@ -137,10 +203,12 @@ h2 {
 
 p {
     line-height: 190%;
+    
 }
 
 #sectionOneParagraph {
     padding: 1rem 0;
+
 }
 
 .whiteText {
@@ -155,8 +223,14 @@ p {
     color: #F94F4F;
 }
 
+.subParagraph {
+    margin-top: 1.5rem;
+}
+
 #scheduleCallRed {
     color:#F94F4F;
+    background-color: #191921;
+    border: none;
     text-decoration: underline;
     font-weight: 800;
     font-size: 1.1rem;
@@ -170,7 +244,12 @@ p {
 }
 
 #sectionThreeHeading {
+    display: none;
+}
+
+#sectionThreeHeadingTwo {
     padding: 0 2rem 2rem 0;
+
 }
 
 #sectionThreeContainer {
@@ -192,14 +271,13 @@ p {
 .bgNumberHeading {
     position: relative;
     left: 6%;
-    bottom: 40%;
-
+    transform: translateY(-200%);
 }
 
 .subHeading {
     margin-bottom: -2vh;
     height: 14vh;
-
+    min-height: 93.38px;
 }
 #sectionFour {
     background-color: #191921;
@@ -211,8 +289,10 @@ p {
 }
 
 .slideBg {
-    height: 55%;
-    position: relative;
+    height: 55vh;
+    width: 100%;
+    min-height: 366.85px;
+    position: absolute;
 }
 
 #slideBgOne {
@@ -220,9 +300,8 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-bottom: -30%;
+    left: 0%;
     opacity: 1;
-    left: 0;
     scale: 1;
     transition: all 1s;
 }
@@ -232,12 +311,10 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    bottom: 39.5%;
-    left: 100%;
-    margin-bottom: -55%;
     opacity: 0;
     scale: 0.25;
     transition: all 1s;
+    left: 100%;
 }
 
 #slideBgThree {
@@ -245,12 +322,10 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    bottom: 66%;
-    left: 200%;
-    margin-bottom: -110%;
     opacity: 0;
     scale: 0.25;
     transition: all 1s;
+    left: 200%;
 }
 
 .gradientOverlay {
@@ -274,6 +349,11 @@ p {
     text-shadow: 4px 3px 5px rgba(0,0,0,0.6);
 }
 
+#slideHeightDiv {
+    height: 55vh;
+    min-height: 366.85px;
+}
+
 .slideSpan {
     font-weight: 400;
 }
@@ -292,6 +372,7 @@ p {
 
 footer {
     height: 50vh;
+    min-height: 333.5px;
     display: flex;
     align-items: center;
 }
@@ -308,13 +389,17 @@ footer {
     left: 32.5%;
     top: -40%;
     z-index: 998;
+    visibility: hidden;
+    opacity: 0;
     transition: top 1s;
 }
 
 #menuDiv ul li {
     padding: 1rem;
     color: #FFF;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #menuDiv ul :first-child {
@@ -323,6 +408,9 @@ footer {
 
 #menuDiv ul :last-child {
     margin-bottom: 1rem;
+    padding: 0;
+    height: 4rem;
+    width: 100%;
 }
 
 #menuDiv ul {
@@ -330,68 +418,8 @@ footer {
     list-style-type: none;
 }
 
-#contactFormDiv {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 95%);
-    width: 100%;
-    height: 100%;
-    text-align: right;
-    z-index: 9999;
-    border-top: 1.5px solid gray;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
-
-}
-
-#contactFormDiv img {
-    padding: 1rem;
-}
-
-
-form {
-    text-align: center;
-}
-
-label {
-    font-weight: 800;
-    line-height: 250%;
-}
-
-.normalInput {
-    width: 45vw;
-    padding: 0 2.5vw;
-    height: 2em;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-bottom: 2rem;
-}
-
-#date {
-    margin-right: 1rem;
-    border-radius: 10px;
-    border: 1px solid black;
-    height: 2rem;
-    padding: 0 0.5rem;
-}
-
-#time {
-    margin-left: 1rem;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 0 0.5rem;
-    height: 2rem;
-}
-
 .redButtons:hover, .redButtons:active {
     background-color: #F09896;
-}
-
-#formNote {
-    color: grey;
-    line-height: 150%;
-    font-size: 0.75rem;
-    padding: 1rem 2rem 0 2rem;
 }
 
 a {
@@ -399,6 +427,11 @@ a {
     height: 100%;
     width: 100%;
     color: white;
+}
+
+#projectCenterDiv {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
 }
 
 #projectHeading {
@@ -411,9 +444,50 @@ a {
 
 }
 
-@media screen and (min-width: 767px) and (max-width :1023.99px) {
+@media screen and (min-width: 766.5px) and (max-width :1023px) {
+    #redWaveTwo {
+        display: none;
+    }
+
+    #scheduleCallRed:active {
+        color:#F09896;
+    }
+    
+    #scheduleCallRed:hover {
+        cursor: pointer;
+    }
+    
+    #redButtonOne:active {
+        background-color: #F09896;
+    }
+    
+    #redButtonOne:hover {
+        cursor: pointer;
+    }
+    
+    #prevArrow:hover {
+        cursor: pointer;
+    }
+    
+    #nextArrow:hover {
+        cursor: pointer;
+    }
+    
+    #callScheduleButton:active {
+        background-color: #F09896;
+    }
+    
+    #callScheduleButton:hover {
+        cursor: pointer;
+    }
+    
+    #liFourButton:active {
+        background-color: #F94F4F;
+    }
+
     header {
         height: 15vh;
+        min-height: 153.6px;
         width: 40%;
         display: flex;
         align-items: center;
@@ -426,7 +500,7 @@ a {
 
     /* #logoContainer DOUBLE ATM*/
     #logoContainer {
-        padding: 1rem;
+        margin-left: 2rem;
     }
 
 
@@ -436,11 +510,13 @@ a {
 
     #heightDiv {
         height: 15vh;
+        min-height: 153.6px;
     }
 
     #menuDiv {
         width: 60%;
         height: 15vh;
+        min-height: 153.6px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -449,6 +525,10 @@ a {
         right: 0;
         z-index: 999;
         background-color: #F94F4F;
+    }
+
+    .menu {
+        width: 100%;
     }
 
     .menu a {
@@ -467,91 +547,30 @@ a {
     }
 
     #liFour {
+        list-style-type: none;
+        margin-left: .5rem;
+        display: inline-block;
+    }
+
+    #liFourButton:active {
+        background-color: #191921;
+    }
+
+    #liFourButton:hover {
+        cursor: pointer;
+    }
+
+    #liFourButton {
+        color: white;
+        border: none;
         background-color: #000;
         font-weight: 800;
-        padding: 1.3rem;
-        margin-left: 1rem;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.1rem;
     }
 
-    #contactFormDiv {
-        position: fixed;
-        background-color: rgba(255, 255, 255, 95%);
-        width: 100%;
-        height: 100%;
-        text-align: right;
-        z-index: 9999;
-        border-top: 1.5px solid gray;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 1s;
-    }
-
-    form {
-        text-align: center;
-        margin-top: -3rem;
-    }
-
-    label {
-        font-weight: 800;
-        line-height: 250%;
-        font-size: 2rem;
-    }
-
-    .normalInput {
-        width: 45vw;
-        padding: 0 2.5vw;
-        height: 3rem;
-        border-radius: 10px;
-        border: 1px solid black;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
-    
-    #date {
-        margin-right: 1rem;
-        border-radius: 10px;
-        border: 1px solid black;
-        height: 3rem;
-        padding: 0 1.5rem;
-        width: 30vw;
-        font-size: 1.5rem;
-    }
-    
-    #time {
-        margin-left: 1rem;
-        border-radius: 10px;
-        border: 1px solid black;
-        padding: 0 0.5rem;
-        height: 3rem;
-        width: 15vw;
-        font-size: 1.5rem;
-
-    }
-
-    label {
-        font-weight: 800;
-        line-height: 250%;
-        font-size: 2rem;
-    }
-
-    #formCross {
-        height: 3rem;
-        margin: 2rem;
-    }
-
-    #formNote {
-        font-size: 1.5rem;
-        padding: 2rem;
-    }
-
-    #submit {
-        padding: 2rem 4rem;
-        background-color: #F94F4F;
-        border: none;
-        color: #FFF;
-        font-weight: 800;
-        font-size: 1.5rem;
-        margin-top: 1rem;
+    #slideHeightDiv {
+        display: none;
     }
 
     .bigImages {
@@ -568,6 +587,7 @@ a {
         background-position: 100%;
         display: flex;
         align-items: center;
+        background-size: contain;
     }
 
     #heroCenter {
@@ -590,6 +610,7 @@ a {
         font-size: 1.1rem;
     }
 
+
     h1 {
         font-size: 3.5rem;
         margin-bottom: 2rem;
@@ -601,27 +622,30 @@ a {
 
     #designSectionBg {
         height: 60vh;
+        min-height: 614.4px;
         width: 50%;
         background-image: url(./assets/tablet/image-strategic.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        display: inline-block;
 
     }
 
     #designTextContainer {
         width: 50%;
         height: 60vh;
+        min-height: 614.4px;
         display: inline-block;
-        position: relative;
-        left: 43%;
-        bottom: 60vh;
-        padding: 5rem 3rem;
+        position: absolute;
+        left: 50%;
+        padding: 5rem 3rem 5rem 5rem;
     }
 
     #sectionTwo {
         background-color: #191921;
         color: #FFF;
         height: 60vh;
+        min-height: 614.4px;
     }
 
     #redWaveOne {
@@ -650,16 +674,23 @@ a {
 
     #scheduleCallRed {
         color: #F94F4F;
+        background-color: #191921;
+        border: none;
         font-size: 1.1rem;
         font-weight: 800;
         text-decoration: underline;
         text-underline-offset: 0.5rem;
     }
 
+    #scheduleCallRed:active {
+        color: #F09896;
+    }
+
     #subsDiv {
         background-color: #F94F4F;
         width: 60vw;
-        height: 70vh;
+        height: 80vh;
+        min-height: 819.2px;
         padding: 2rem;
         line-height: 190%;
         margin-left: 40vw;
@@ -668,19 +699,25 @@ a {
     }
 
     #sectionThreeContainer {
-        height: 70vh;
+        height: 80vh;
+        min-height: 819.2px;
         width: 40%;
+    }
+
+    #sectionThreeHeadingTwo {
+        display: none;
     }
 
     #sectionThreeHeading {
         font-size: 2rem;
-        margin: auto;
-        padding: 16rem 1rem 16rem 2rem;
+        width: 40%;
+        padding: 0rem 1rem 0em 2rem;
         color: black;
         line-height: 130%;
-        float: left;
+        position: absolute;
+        right: 60%;
+        transform: translateY(-80%);
     }
-
     .bgNumber {
         font-size: 5rem;
         font-weight: 800;
@@ -698,9 +735,8 @@ a {
 
     .bgNumberHeading {
         position: relative;
-        bottom: 4vh;
+        transform: translateY(-140%);
         left: 4%;
-        margin-bottom: -2rem;
     }
 
     #firstSub {
@@ -708,11 +744,11 @@ a {
     }
 
     #sectionThree {
-
         position: relative;
         clear: both;
         bottom: 10vh;
         margin-bottom: -10vh;
+
     }
     
     #slideBgOne {
@@ -720,9 +756,8 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
+        position: absolute;
         left: 40%;
-        border: 1px solid green;
         opacity: 1;
         visibility: visible;
     }
@@ -732,8 +767,7 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
-        bottom: 0%;
+        position: absolute;
         left: 40%;
         visibility: hidden;
         scale: 0;
@@ -745,8 +779,7 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
-        bottom: 0%;
+        position: absolute;
         left: 40%;
         visibility: hidden;
         scale: 0;
@@ -790,23 +823,24 @@ a {
     #prevArrow circle, #prevArrow path {
         stroke: #F09896;
     }
-
+    /* MAYBE FIX REQUIRED WITH ABSOLUTE POSITION OF SLIDEBG AND REMOVED NEGATIVE MARGIN */
     .slideBg {
         width: 60%;
-        height: 100%;
-        margin-bottom: -50vh;
+        height: 50vh;
+        min-height: 512px;
         transition: all 1s;
     }
 
     #sectionFour {
         height: 50vh;
-
+        min-height: 512px;
 
     }
 
     #slideTitleContainer {
         width: 45%;
         height: 35vh;
+        min-height: 358.4px;
         background-color: #191921;
         z-index: 200;
         position: relative;
@@ -814,7 +848,7 @@ a {
     }
 
     #projectHeading {
-        padding: 0 0 1rem 2rem;
+        padding: 0 2rem 1rem 2rem;
         font-size: 2rem;
         transition: all 0.2s linear;
     }
@@ -841,6 +875,10 @@ a {
         font-size: 1.1rem;
     }
 
+    #callScheduleButton:active {
+        background-color: #F09896;
+    }
+
     #footerHeading {
         padding: 0 50% 0 0;
         font-size: 2.1rem;
@@ -862,7 +900,483 @@ a {
         bottom: 25%;
     }
 
+    #prevArrow:hover {
+        cursor: pointer;
+    }
+
+    #nextArrow:hover {
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 1023.5px) {
+
+    header {
+        min-height: 115.2px;
+        height: 15vh;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+    }
+
+    #logoContainer {
+        margin: 1rem 0 1rem 20%;
+    }
+
+    #iconContainer {
+        display: none;
+    }
+
+    #heightDiv {
+        min-height: 115.2px;
+        height: 15vh;
+    }
+
+    #menuDiv {
+        width: 50%;
+        min-height: 115.2px;
+        height: 15vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #F94F4F;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        width: 91%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu a:hover {
+        text-shadow:
+        -.75px -.75px 0 #FFF,
+        .75px -.75px 0 #FFF,
+        -.75px .75px 0 #FFF,
+        .75px .75px 0 #FFF;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+
+    .menu a li {
+        display: inline-block;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+    }
+
+    #liOne {
+        margin-left: 0rem;
+    }
+
+    #liFour {
+        list-style-type: none;
+    }
+
+    #liFourButton:active {
+        background-color: #191921;
+    }
+
+    #liFourButton:hover {
+        cursor: pointer;
+    }
+
+    #liFourButton {
+        color: white;
+        font-size: 1.1rem;
+        border: none;
+        background-color: #000;
+        font-weight: 800;
+        padding: 1.3rem 2rem;
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    #slideHeightDiv {
+        display: none;
+    }
+
+    #liFourLink:hover {
+        text-shadow: none;
+    }
+
+    #heroImage {
+        display: none;
+    }
+
+    #heroContainer {
+        background-image: url(./assets/desktop/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        display: flex;
+        align-items: center;
+        background-size: contain;
+        min-height: 652.8px;
+        
+    }
+
+    #heroCenter {
+        width: 40%;
+        margin: 2rem 0 5rem 10%;
+    }
+
+    #sectionOneParagraph {
+        line-height: 190%;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+    
+    #redButtonOne {
+        padding: 1.75rem 4rem;
+        background-color: #F94F4F;
+        border: none;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    #redButtonOne:hover {
+        cursor: pointer;
+    }
+
+    #redButtonOne:active {
+        background-color: #F09896;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        margin-bottom: 3rem;
+    }
+
+    #designSectionBg {
+        display: none;
+    }
+
+    #sectionTwo {
+        min-height: 729.6px;
+        display: flex;
+        height: 95vh;
+    }
+
+    #sectionImageOne {
+        width: 50vw;
+        min-height: 850px;
+        flex: 1;
+        max-height: 1150px;
+    }
+
+    #redWaveOne {
+        position: absolute;
+        right: 46%;
+        margin-top: 15%;
+        z-index: 1;
+
+    }
+
+    #designTextContainer {
+        width: 50%;
+        flex: 1;
+        clear: both;
+        min-height: 691.2px;
+        height: 100%;
+        background-color: #191921;
+    }
+
+    #designCenterDiv {
+        width: 60%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+    }
+
+    #designHeading {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .whiteText {
+        color: #FFF;
+        font-size: 1.5rem;
+
+    }
+
+    #sectionTwoParagraph {
+        line-height: 190%;
+        margin-bottom: 3rem;
+    }
+
+    #sectionTwo {
+    }
+
+    #scheduleCallRed {
+        color: #F94F4F;
+        font-size: 1.1rem;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    #scheduleCallRed:hover {
+        cursor: pointer;
+    }
+
+    #scheduleCallRed:active {
+        color: #F09896;
+    }
+
+    #scheduleCallRed {
+        font-size: 1.5rem;
+    }
+
+    #red {
+        color: #F94F4F;
+    }
+
+    #subsDiv {
+        background-color: #F94F4F;
+        width: 62.5%;
+        min-height: 768px;
+        padding: 20rem 5rem 10rem 20rem;
+        line-height: 190%;
+        z-index: 2;
+        position: relative;
+        left: 37.5%;
+    }
+    #sectionThree {
+        min-height: 768px;
+        clear: both;
+    }
+
+    #sectionThreeHeadingTwo {
+         display: none;
+    }
+
+    #sectionThreeHeading {
+        background-color: transparent;
+        width: 75%;
+        height: 30%;
+        color: black;
+        z-index: 3;
+        position: absolute;
+        font-size: 4rem;
+        line-height: 120%;
+        left: -46%;
+
+        margin-top: -20vh;
+    }
+
+    .bgNumber {
+        font-size: 7.5rem;
+        font-weight: 800;
+        color: #F09896;
+    }
+
+    .sectionThreeSubs {
+        margin-bottom: 7.5rem;
+    }
+
+    .bgNumberHeading {
+        position: relative;
+        bottom: 5.5vh;
+        left: 10%;
+
+        font-size: 2rem;
+    }
+
+    .sectionThreeSubs p {
+        font-size: 1.5rem;
+        line-height: 190%;
+    }
+
+    #slideBgOne {
+        background-image: url(./assets/desktop/image-slide-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 37.5%;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #slideBgTwo {
+        background-image: url(./assets/desktop/image-slide-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 37.5%;
+        visibility: hidden;
+        scale: 0;
+        opacity: 0;
+    }
+    
+    #slideBgThree {
+        background-image: url(./assets/desktop/image-slide-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 37.5%;
+        visibility: hidden;
+        scale: 0;
+        opacity: 0;
+    }
+    
+    .gradientOverlay {
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+        height: 100%;
+        width: 100%;
+
+    }
+    
+    .slideParagraph {
+        color: #FFF;
+        font-weight: 800;
+        line-height: 180%;
+        text-align: right;
+        padding: 2rem 10rem;
+        text-shadow: 4px 3px 5px rgba(0,0,0,0.6);
+        position: relative;
+        top: 75%;
+        font-size: 1.5rem;
+    }
+    
+    .slideSpan {
+        font-weight: 400;
+    }
+    
+    #arrowDiv {
+        padding: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #prevArrow circle, #prevArrow path {
+        stroke: #F09896;
+    }
+
+    .slideBg {
+        width: 62.5%;
+        height: 85vh;
+        min-height: 652.8px;
+        transition: all 1s;
+    }
+
+    #sectionFour {
+        height: 85vh;
+        min-height: 652.8px;
+    }
+
+    #slideTitleContainer {
+        width: 50%;
+        height: 60vh;
+        min-height: 460.8px;
+        background-color: #191921;
+        z-index: 200;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #projectHeading {
+        padding: 0 0 2rem 2rem;
+        margin-top: -2rem;
+        font-size: 3rem;
+        transition: all 0.2s linear;
+    }
+
+    #projectCenterDiv {
+        position: relative;
+        width: 60%;
+    }
+
+    #arrowDiv {
+        width: 30%;
+        margin-left: 2rem;
+    }
+
+    #callScheduleButton {
+        padding: 1.5rem 3rem;
+        margin-right: 3rem;
+        background-color: #F94F4F;
+        border: none;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    #callScheduleButton:hover {
+        cursor: pointer;
+    }
+
+    #callScheduleButton:active {
+        background-color: #F09896;
+    }
+
+    #whiteWave {
+        height: 4rem;
+        position: absolute;
+        right: -10%;
+        margin-top: -6rem;
+    }
+
     footer {
-        padding-bottom: 4rem;
+        height: 30vh;
+        min-height: 230.4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #redWaveTwo {
+        position: absolute;
+        right: 96%;
+    }
+
+    #footerContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 230.4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #footerHeading {
+        font-size: 3rem;
+        width: 35%;
+    }
+
+    #prevArrow:hover {
+        cursor: pointer;
+    }
+
+    #nextArrow:hover {
+        cursor: pointer;
     }
 }

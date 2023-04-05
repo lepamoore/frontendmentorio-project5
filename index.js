@@ -1,7 +1,6 @@
 const callButton = document.getElementById('callScheduleButton');
 const callText = document.getElementById('scheduleCallRed');
 const contactForm = document.getElementById('contactFormDiv'); 
-const formCross = document.getElementById('formCross');
 const menuDiv = document.getElementById('menuDiv');
 const menuIcon = document.getElementById('hamburgerIcon');
 const menuIconSrcBurger = './assets/mobile/icon-hamburger.svg';
@@ -16,23 +15,21 @@ const projectHeading = document.getElementById('projectHeading');
 const landingDiv = document.getElementById('landingDiv');
 let galleryCounter = 1;
 
-function toggleCallVisible() {
-    if(getComputedStyle(contactForm).visibility === 'hidden') {
-        contactForm.style.visibility = 'visible';
-        contactForm.style.opacity = '1';
-    } else {
-        contactForm.style.opacity = '0';
-        contactForm.style.visibility = 'hidden';
-    }
+function toggleMenuCB()  {
+    menuDiv.style.opacity = '0';
+    menuDiv.style.visibility = 'hidden';
 }
 
 function toggleMenuVisible() {
     if(menuIcon.src.includes('icon-hamburger')) {
         menuDiv.style.top = '10%';
+        menuDiv.style.visibility = 'visible';
+        menuDiv.style.opacity = '1';
         menuIcon.src = menuIconSrcCross;
     } else {
         menuDiv.style.top = '-40%';
         menuIcon.src = menuIconSrcBurger;
+        setTimeout(toggleMenuCB, 1000);
     }
 }
 
@@ -104,11 +101,9 @@ function gallerySlideHandle() {
                 slideBgOne.style.opacity = '1';
                 slideBgOne.style.left = '0';
                 slideBgOne.style.scale = '1';
-                slideBgTwo.style.bottom = '39.5%';
                 slideBgTwo.style.left = '100%';
                 slideBgTwo.style.opacity = '0';
                 slideBgTwo.style.scale = '0.25';
-                slideBgThree.style.bottom = '65.5%';
                 slideBgThree.style.left = '200%';
                 slideBgThree.style.opacity = '0';
                 slideBgThree.style.scale = '0.25';
@@ -120,11 +115,9 @@ function gallerySlideHandle() {
                 slideBgOne.style.opacity = '0';
                 slideBgOne.style.left = '-100%';
                 slideBgOne.style.scale = '0.25';
-                slideBgTwo.style.bottom = '39.5%';
                 slideBgTwo.style.left = '0%';
                 slideBgTwo.style.opacity = '1';
                 slideBgTwo.style.scale = '1';
-                slideBgThree.style.bottom = '65.5%';
                 slideBgThree.style.left = '100%';
                 slideBgThree.style.opacity = '0';
                 slideBgThree.style.scale = '0.25';
@@ -136,11 +129,9 @@ function gallerySlideHandle() {
                 slideBgOne.style.opacity = '0';
                 slideBgOne.style.left = '-200%';
                 slideBgOne.style.scale = '0.25';
-                slideBgTwo.style.bottom = '39.5%';
                 slideBgTwo.style.left = '-100%';
                 slideBgTwo.style.opacity = '0';
                 slideBgTwo.style.scale = '0.25';
-                slideBgThree.style.bottom = '65.5%';
                 slideBgThree.style.left = '0%';
                 slideBgThree.style.opacity = '1';
                 slideBgThree.style.scale = '1';
@@ -152,6 +143,53 @@ function gallerySlideHandle() {
                 break;
         }
     } else if(tabletStart.matches && tabletEnd.matches) {
+        switch (galleryCounter) {
+            case 1:
+                slideBgOne.style.visibility = 'visible';
+                slideBgOne.style.scale = '1';
+                slideBgOne.style.opacity = '1'
+                slideBgTwo.style.visibility = 'hidden';
+                slideBgTwo.style.scale = '0';
+                slideBgTwo.style.opacity = '0';
+                slideBgThree.style.visibility = 'hidden';
+                slideBgThree.style.scale = '0';
+                slideBgThree.style.opacity = '0';
+                prevArrowLight();
+                nextArrowStrong();
+                break;
+
+            case 2:
+                slideBgOne.style.visibility = 'hidden';
+                slideBgOne.style.scale = '0';
+                slideBgOne.style.opacity = '0'
+                slideBgTwo.style.visibility = 'visible';
+                slideBgTwo.style.scale = '1';
+                slideBgTwo.style.opacity = '1';
+                slideBgThree.style.visibility = 'hidden';
+                slideBgThree.style.scale = '0';
+                slideBgThree.style.opacity = '0';
+                prevArrowStrong();
+                nextArrowStrong();
+                break;
+
+            case 3:
+                slideBgOne.style.visibility = 'hidden';
+                slideBgOne.style.scale = '0';
+                slideBgOne.style.opacity = '0'
+                slideBgTwo.style.visibility = 'hidden';
+                slideBgTwo.style.scale = '0';
+                slideBgTwo.style.opacity = '0';
+                slideBgThree.style.visibility = 'visible';
+                slideBgThree.style.scale = '1';
+                slideBgThree.style.opacity = '1';
+                prevArrowStrong();
+                nextArrowLight();
+                break;
+        
+            default:
+                break;
+        }
+    } else if(desktopStart.matches) {
         switch (galleryCounter) {
             case 1:
                 slideBgOne.style.visibility = 'visible';
@@ -230,13 +268,6 @@ function slideProjectCases() {
     }
 }
 
-function formHTML() {
-    contactForm.style.visibility = 'hidden';
-    contactForm.style.opacity = '0';
-    landingDiv.style.visibility = 'visible';
-    landingDiv.style.opacity = '1';
-}
-
 
 function removeHash () { 
     history.pushState("", document.title, window.location.pathname + window.location.search);
@@ -274,35 +305,38 @@ function reloadDesktop() {
 // lightRed '#F09896'
 
 
-var x = window.matchMedia("(max-width: 766.99px)");
-var tabletStart = window.matchMedia('(min-width: 767px)');
-var tabletEnd = window.matchMedia('(max-width :1023.99px)');
+var x = window.matchMedia("(max-width: 766.49px)");
+var tabletStart = window.matchMedia('(min-width: 766.5px)');
+var tabletEnd = window.matchMedia('(max-width :1023.49px)');
+var desktopStart = window.matchMedia('(min-width: 1023.5px');
 
 function myFunction(x) {
     if (x.matches) { // If media query matches
         window.addEventListener('resize', reloadMobile);
-        callButton.addEventListener('click', toggleCallVisible);
-        formCross.addEventListener('click', toggleCallVisible);
-        callText.addEventListener('click', toggleCallVisible);
         menuIcon.addEventListener('click', toggleMenuVisible);
+        document.getElementById('liFourButton').addEventListener('click', toggleMenuVisible)
         document.getElementById('liOneLink').addEventListener('click', listOnClick);
         document.getElementById('liTwoLink').addEventListener('click', listOnClick);
         document.getElementById('liThreeLink').addEventListener('click', listOnClick);
-        document.getElementById('liFourLink').addEventListener('click', listOnClick);
         prevArrow.addEventListener('click', gallerySlideDown);
         nextArrow.addEventListener('click', gallerySlideUp);
-        document.getElementById('form').addEventListener('submit', formHTML);
         gallerySlideHandle();
+        gallerySlideUp();
+        gallerySlideDown();
     } else if(tabletStart.matches && tabletEnd.matches) {
         window.addEventListener('resize', reloadTablet);
-        callButton.addEventListener('click', toggleCallVisible);
-        formCross.addEventListener('click', toggleCallVisible);
-        callText.addEventListener('click', toggleCallVisible);
-        document.getElementById('liFourLink').addEventListener('click', toggleCallVisible);
-        document.getElementById('form').addEventListener('submit', formHTML);
         prevArrow.addEventListener('click', gallerySlideDown);
         nextArrow.addEventListener('click', gallerySlideUp);
         gallerySlideHandle();
+        gallerySlideUp();
+        gallerySlideDown();
+    } else if(desktopStart.matches) {
+        window.addEventListener('resize', reloadDesktop);
+        prevArrow.addEventListener('click', gallerySlideDown);
+        nextArrow.addEventListener('click', gallerySlideUp);
+        gallerySlideHandle();
+        gallerySlideUp();
+        gallerySlideDown();
     }
   }
 
