@@ -63,7 +63,7 @@ html, body{
     overflow-x: hidden;
 }
 
-@media screen and (max-width :766.49px) {
+@media screen and (max-width :766.5px) {
 
 #redWaveTwo {
     display: none;
@@ -105,7 +105,6 @@ html, body{
     background-color: #F94F4F;
 }
 
-
 #liFourButton {
     color: white;
     border: none;
@@ -141,6 +140,10 @@ header {
 
 #iconContainer {
     padding: 1rem;
+}
+
+#hamburgerIcon:hover {
+    cursor: pointer;
 }
 
 #heightDiv {
@@ -312,9 +315,9 @@ p {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    scale: 0.25;
+    scale: 0;
     transition: all 1s;
-    left: 100%;
+    left: 0%;
 }
 
 #slideBgThree {
@@ -323,9 +326,9 @@ p {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    scale: 0.25;
+    scale: 0;
     transition: all 1s;
-    left: 200%;
+    left: 0%;
 }
 
 .gradientOverlay {
@@ -444,7 +447,7 @@ a {
 
 }
 
-@media screen and (min-width: 766.5px) and (max-width :1023px) {
+@media screen and (min-width: 767px) and (max-width :1023.5px) {
     #redWaveTwo {
         display: none;
     }
@@ -551,6 +554,8 @@ a {
         margin-left: .5rem;
         display: inline-block;
     }
+
+
 
     #liFourButton:active {
         background-color: #191921;
@@ -910,7 +915,7 @@ a {
 
 }
 
-@media screen and (min-width: 1023.5px) {
+@media screen and (min-width: 1024px) {
 
     header {
         min-height: 115.2px;
