@@ -638,6 +638,8 @@ a {
 
     #sectionImageOne {
         display: none;
+        height: 0;
+        width: 0;
     }
 
     #designSectionBg {
@@ -1099,6 +1101,7 @@ a {
 
     #sectionImageOne {
         width: 50vw;
+        height: auto;
         min-height: 850px;
         flex: 1;
         max-height: 1150px;
