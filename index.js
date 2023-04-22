@@ -22,9 +22,13 @@ function toggleMenuVisible() {
         menuDiv.style.visibility = 'visible';
         menuDiv.style.opacity = '1';
         menuIcon.src = menuIconSrcCross;
+        menuIcon.style.height = '21px';
+        menuIcon.style.width = '21px';
     } else {
         menuDiv.style.top = '-160%';
         menuIcon.src = menuIconSrcBurger;
+        menuIcon.style.height = '18px';
+        menuIcon.style.width = '24px';
         menuDiv.style.opacity = '0';
         menuDiv.style.visibility = 'hidden';
     }

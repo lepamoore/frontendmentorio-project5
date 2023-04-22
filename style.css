@@ -66,6 +66,10 @@ html, body{
     overflow-x: hidden;
 }
 
+.menu {
+    list-style-type: none;
+}
+
 @media screen and (max-width :766.5px) {
 
 #redWaveTwo {
@@ -413,7 +417,6 @@ footer {
 }
 
 #menuDiv ul li {
-    padding: 1rem;
     color: #FFF;
     display: flex;
     align-items: center;
@@ -421,18 +424,27 @@ footer {
 }
 
 #menuDiv ul :first-child {
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 #menuDiv ul :last-child {
-    margin-bottom: 1rem;
     padding: 0;
-    height: 4rem;
+    height: 3rem;
     width: 100%;
 }
 
+#liOneLink, #liTwoLink, #liThreeLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#liOneLink:active, #liTwoLink:active, #liThreeLink:active {
+    background-color: #F94F4F;
+}
+
 #menuDiv ul {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     list-style-type: none;
 }
 
@@ -549,24 +561,21 @@ a {
         width: 100%;
     }
 
-    .menu a {
+    .menu  li a {
         text-decoration: none;
         color: white;
     }
 
-    .menu a li {
+    .menu li {
         display: inline-block;
         padding: 0.9rem;
         font-size: 1.1rem;
     }
 
-    #liOne {
-        margin-left: 0.5rem;
-    }
+
 
     #liFour {
         list-style-type: none;
-        margin-left: .5rem;
         display: inline-block;
     }
 
@@ -585,7 +594,7 @@ a {
         border: none;
         background-color: #000;
         font-weight: 800;
-        padding: 1.1rem 1.5rem;
+        padding: 1.1rem 1.25rem;
         font-size: 1.1rem;
     }
 
@@ -862,6 +871,18 @@ a {
 
     }
 
+    .menu li a:hover {
+        text-shadow:
+        -.75px -.75px 0 #FFF,
+        .75px -.75px 0 #FFF,
+        -.75px .75px 0 #FFF,
+        .75px .75px 0 #FFF;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+
     #slideTitleContainer {
         width: 45%;
         height: 35vh;
@@ -984,12 +1005,12 @@ a {
         justify-content: space-evenly;
     }
 
-    .menu a {
+    .menu li a {
         text-decoration: none;
         color: white;
     }
 
-    .menu a:hover {
+    .menu li a:hover {
         text-shadow:
         -.75px -.75px 0 #FFF,
         .75px -.75px 0 #FFF,
@@ -1001,7 +1022,7 @@ a {
         transition: all 1s;
     }
 
-    .menu a li {
+    .menu li a {
         display: inline-block;
         padding: 0.9rem;
         font-size: 1.1rem;
