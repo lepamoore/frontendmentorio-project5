@@ -302,7 +302,7 @@ p {
 }
 
 #slideBgOne {
-    background-image: url(./assets/mobile/image-slide-1.jpg);
+    background-image: url(./assets/mobile/image-slide-1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -313,7 +313,7 @@ p {
 }
 
 #slideBgTwo {
-    background-image: url(./assets/mobile/image-slide-2.jpg);
+    background-image: url(./assets/mobile/image-slide-2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -324,7 +324,7 @@ p {
 }
 
 #slideBgThree {
-    background-image: url(./assets/mobile/image-slide-3.jpg);
+    background-image: url(./assets/mobile/image-slide-3.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -590,7 +590,7 @@ a {
     }
 
     #heroContainer {
-        background-image: url(./assets/tablet/image-hero.jpg);
+        background-image: url(./assets/tablet/image-hero.webp);
         background-repeat: no-repeat;
         background-position: 100%;
         display: flex;
@@ -632,7 +632,7 @@ a {
         height: 60vh;
         min-height: 614.4px;
         width: 50%;
-        background-image: url(./assets/tablet/image-strategic.jpg);
+        background-image: url(./assets/tablet/image-strategic.webp);
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-block;
@@ -760,7 +760,7 @@ a {
     }
     
     #slideBgOne {
-        background-image: url(./assets/tablet/image-slide-1.jpg);
+        background-image: url(./assets/tablet/image-slide-1.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -771,7 +771,7 @@ a {
     }
     
     #slideBgTwo {
-        background-image: url(./assets/tablet/image-slide-2.jpg);
+        background-image: url(./assets/tablet/image-slide-2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -783,7 +783,7 @@ a {
     }
     
     #slideBgThree {
-        background-image: url(./assets/tablet/image-slide-3.jpg);
+        background-image: url(./assets/tablet/image-slide-3.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1029,7 +1029,7 @@ a {
     }
 
     #heroContainer {
-        background-image: url(./assets/desktop/image-hero.jpg);
+        background-image: url(./assets/desktop/image-hero.webp);
         background-repeat: no-repeat;
         background-position: 100%;
         display: flex;
@@ -1215,7 +1215,7 @@ a {
     }
 
     #slideBgOne {
-        background-image: url(./assets/desktop/image-slide-1.jpg);
+        background-image: url(./assets/desktop/image-slide-1.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1226,7 +1226,7 @@ a {
     }
     
     #slideBgTwo {
-        background-image: url(./assets/desktop/image-slide-2.jpg);
+        background-image: url(./assets/desktop/image-slide-2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1238,7 +1238,7 @@ a {
     }
     
     #slideBgThree {
-        background-image: url(./assets/desktop/image-slide-3.jpg);
+        background-image: url(./assets/desktop/image-slide-3.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
