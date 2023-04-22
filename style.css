@@ -201,6 +201,8 @@ section {
     left: 5%;
     transform: translateY(-65%);
     z-index: 1;
+    width: 70.813px;
+    height: 32px;
 }
 
 h2 {
@@ -210,6 +212,16 @@ h2 {
 p {
     line-height: 190%;
     
+}
+
+#heroImage {
+    width: 100%;
+    height: auto;
+}
+
+#sectionImageOne {
+    width: 100%;
+    height: auto;
 }
 
 #sectionOneParagraph {
@@ -657,10 +669,13 @@ a {
     }
 
     #redWaveOne {
-       position: relative;
-       bottom: 140%;
+       position: absolute;
+       top: 31%;
        left: 46%;
        height: 2rem;
+       z-index: 999;
+       width: 70.813px;
+       height: 32px;
     }
 
     #designHeading {
@@ -1094,7 +1109,8 @@ a {
         right: 46%;
         margin-top: 15%;
         z-index: 1;
-
+        width: 135px;
+        height: 61px;
     }
 
     #designTextContainer {
